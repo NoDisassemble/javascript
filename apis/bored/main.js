@@ -1,7 +1,7 @@
 const para = document.querySelector(".para");
 const btn = document.querySelector(".btn");
 
-const url = "http://www.boredapi.com/api/activity/";
+const url = "https://www.boredapi.com/api/activity/";
 
 
 // Show loading spinner
