@@ -21,7 +21,7 @@ function showLoading() {
 }
 showLoading();
 
-async function boredAPI() {
+async function zenAPI() {
     showLoading();
     response = await fetch(url);
     data = await response.json();
