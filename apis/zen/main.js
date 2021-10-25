@@ -31,6 +31,6 @@ async function boredAPI() {
     author.textContent = `-${data[0].a}`;
 }
 
-btn.addEventListener('click', boredAPI)
+btn.addEventListener('click', zenAPI)
 
-boredAPI();
+zenAPI();
