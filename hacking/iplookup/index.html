@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Lookup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>IP Lookup</h1>
+        <div class="input-area">
+            <input id="input" class="input-box" type="text" placeholder="Please enter an IP" onchange="getIp(this)"
+                required>
+            <button class="btn" onclick="getIpLookUp()">
+                <i class="fas fa-search-location"></i>
+            </button>
+        </div>
+        <div class="info">
+            <p class="asn">asn</p>
+            <p class="city">city</p>
+            <p class="continent_code">continent_code</p>
+            <p class="country">country</p>
+            <p class="country_area">country_area</p>
+            <p class="country_calling_code">country_calling_code</p>
+            <p class="country_capital">country_capital</p>
+            <p class="country_code">country_code</p>
+            <p class="country_code_iso3">country_code_iso3</p>
+            <p class="country_name">country_name</p>
+            <p class="country_population">country_population</p>
+            <p class="country_tld">country_tld</p>
+            <p class="currency">currency</p>
+            <p class="currency_name">currency_name</p>
+            <p class="in_eu">in_eu</p>
+            <p class="ip">ip</p>
+            <p class="languages">languages</p>
+            <p class="latitude">latitude</p>
+            <p class="longitude">longitude</p>
+            <p class="org">org</p>
+            <p class="postal">postal</p>
+            <p class="region">region</p>
+            <p class="region_code">region_code</p>
+            <p class="timezone">timezone</p>
+            <p class="utc_offset">utc_offset</p>
+            <p class="version">version</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
