@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender and Age Guess</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Gender & Age Guess</h1>
+        <div class="input-area">
+            <input id="input" class="input-box" type="text" placeholder="Please enter a First Name"
+                onchange="getName(this)" required>
+            <button class="btn" onclick="getNameAndAge()">
+                <i class="fas fa-venus-mars"></i>
+            </button>
+        </div>
+        <div class="info">
+            <p class="name">Name</p>
+            <p class="gender">Gender</p>
+            <p class="age">Age</p>
+            <p class="probability">Probability</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

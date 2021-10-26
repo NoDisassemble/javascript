@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: url(./assets/genagifybg.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  top: 250px;
+  width: 450px;
+  padding: 0px 0px 20px 0px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.486);
+  color: rgb(124, 122, 122);
+}
+
+.wrapper h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  margin-bottom: 30px;
+  background-color: rgb(93, 6, 119);
+  border-radius: 8px 8px 0px 0px;
+  color: rgba(255, 255, 255, 0.712);
+}
+
+.input-area {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px 0px 40px 0px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(231, 23, 103);
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+  height: 3rem;
+  width: 60px;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.input-box {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  height: 3rem;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.info {
+  width: 100%;
+  margin-top: 0px;
+  padding: 10px 0px 0px 10px;
+}
+
+.wrapper p {
+  padding: 0px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    height: 320px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+  }
+
+  .input-area {
+    width: 90%;
+  }
+}
