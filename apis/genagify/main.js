@@ -1,13 +1,13 @@
 // API documentation can be found here: https://genderize.io/ & https://agify.io/
 
-// consts for IP info
+// consts for query selectors info
 const name = document.querySelector(".name");
 const gender = document.querySelector(".gender");
 const probability = document.querySelector(".probability");
 const age = document.querySelector(".age");
 
 
-// get IP
+// get Name
 function getName(input) {
     userName = input.value;
     console.log(userName);
@@ -16,6 +16,7 @@ function getName(input) {
     userAge = `https://api.agify.io/?name=${userName}`;
 }
 
+// main
 async function getNameAndAge() {
     response = await fetch(gen);
     data = await response.json();
