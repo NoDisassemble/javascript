@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="options">
+            <h2>Options</h2>
+            <h3>No. of paragraphs</h3>
+            <div class="controls">
+                <button id="subtract" class="btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input type="number" id="no-of-para" class="input" value="1" onchange="getInput(this)">
+                <button id="add" class="btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <hr>
+            <h3>Paragraph Length</h3>
+            <div class="para-length">
+                <input type="radio" value="short" class="btn-para-len" name="length" id="para-len-short">
+                <label for="para-len-short" class="label-len">Short</label>
+                <input type="radio" value="medium" class="btn-para-len" name="length" id="para-len-medium"
+                    checked="checked">
+                <label for="para-len-medium" class="label-len">Medium</label>
+                <input type="radio" value="long" class="btn-para-len" name="length" id="para-len-long">
+                <label for="para-len-long" class="label-len">Long</label>
+            </div>
+            <hr>
+            <h3>Add HTML Elements</h3>
+            <div class="links">
+                <h4>Links</h4>
+                <label class="toggle" for="links">
+                    <input class="toggle__input" type="checkbox" id="links">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="ul">
+                <h4>Unordered Lists</h4>
+                <label class="toggle" for="ul">
+                    <input class="toggle__input" type="checkbox" id="ul">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="ol">
+                <h4>Ordered Lists</h4>
+                <label class="toggle" for="ol">
+                    <input class="toggle__input" type="checkbox" id="ol">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="dl">
+                <h4>Description Lists</h4>
+                <label class="toggle" for="dl">
+                    <input class="toggle__input" type="checkbox" id="dl">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="bq">
+                <h4>Blockquotes</h4>
+                <label class="toggle" for="bq">
+                    <input class="toggle__input" type="checkbox" id="bq">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="pre">
+                <h4>Pre</h4>
+                <label class="toggle" for="pre">
+                    <input class="toggle__input" type="checkbox" id="pre">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="headings">
+                <h4>Headings</h4>
+                <label class="toggle" for="headings">
+                    <input class="toggle__input" type="checkbox" id="headings">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="decorate">
+                <h4>Bold & Italic</h4>
+                <label class="toggle" for="decorate">
+                    <input class="toggle__input" type="checkbox" id="decorate">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="caps">
+                <h4>ALL CAPS</h4>
+                <label class="toggle" for="caps">
+                    <input class="toggle__input" type="checkbox" id="caps">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <hr>
+        </div>
+        <div class="results">
+            <h2>Lorem Ipsum Generator</h2>
+            <div class="output">
+                <div class="loading">
+                    <i class="fas fa-circle-notch spin"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
