@@ -68,12 +68,14 @@ short.addEventListener("change", () => {
     }
     getLorem();
 })
+
 medium.addEventListener("change", () => {
     if (medium.checked) {
         paraLen = "/medium";
     }
     getLorem();
 })
+
 long.addEventListener("change", () => {
     if (long.checked) {
         paraLen = "/long";
@@ -92,7 +94,7 @@ async function getLorem() {
         results.innerHTML = "";
     } else {
         showLoading();
-        response = await fetch(`${url} + ${input.value} + ${paraLen}`);
+        response = await fetch(`${url}${input.value}${paraLen}`);
         data = await response.text();
         results.innerHTML = data;
         console.log(url + input.value + paraLen)
