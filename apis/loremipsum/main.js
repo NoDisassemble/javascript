@@ -9,18 +9,33 @@ const short = document.getElementById("para-len-short");
 const medium = document.getElementById("para-len-medium");
 const long = document.getElementById("para-len-long");
 
-let paraLen = "/medium";
-
 // const for options  | Example: https://loripsum.net/api/5/medium/link/ul/ol/dl/bq/code/headers/decorate/allcaps
-const links = "link"; // Adds links
-const ul = "ul"; // Adds unordered lists
-const ol = "ol"; // Adds numbered lists
-const dl = "dl"; // Adds description lists
-const bq = "bq"; // Adds blockquotes
-const pre = "code"; // Adds pre tags
-const headings = "headers"; // Adds headers h1 - h6
-const decorate = "decorate"; // Adds bold and italic text
-const allcaps = "allcaps"; // Adds ALL CAPS
+const links = document.getElementById("links");
+const ul = document.getElementById("ul");
+const ol = document.getElementById("ol");
+const dl = document.getElementById("dl");
+const bq = document.getElementById("bq");
+const pre = document.getElementById("pre");
+const headings = document.getElementById("headings");
+const decorate = document.getElementById("decorate");
+const allcaps = document.getElementById("allcaps");
+
+// set options placeholders
+let paraLen = "/medium";
+let linkOption = "";
+let ulOption = "";
+let olOption = "";
+let dlOption = "";
+let bqOption = "";
+let preOption = "";
+let headingsOption = "";
+let decorateOption = "";
+let allcapsOption = "";
+
+
+// consts for copy to clipboard
+const outputCopy = document.getElementById("results");
+const btnCopy = document.getElementById("btnCopy");
 
 const loading = document.querySelector(".loading");
 
@@ -85,7 +100,103 @@ long.addEventListener("change", () => {
 
 
 // Lorum Ipsum options
+// set link option
+links.addEventListener("change", () => {
+    if (links.checked) {
+        linkOption = "/link";
+    } else {
+        linkOption = "";
+    }
+    getLorem();
+})
 
+// set ul option
+ul.addEventListener("change", () => {
+    if (ul.checked) {
+        ulOption = "/ul";
+    } else {
+        ulOption = "";
+    }
+    getLorem();
+})
+
+// set ol option
+ol.addEventListener("change", () => {
+    if (ol.checked) {
+        olOption = "/ol";
+    } else {
+        olOption = "";
+    }
+    getLorem();
+})
+
+// set dl option
+dl.addEventListener("change", () => {
+    if (dl.checked) {
+        dlOption = "/dl";
+    } else {
+        dlOption = "";
+    }
+    getLorem();
+})
+
+// set blockquote option
+bq.addEventListener("change", () => {
+    if (bq.checked) {
+        bqOption = "/bq";
+    } else {
+        bqOption = "";
+    }
+    getLorem();
+})
+
+// set pre option
+pre.addEventListener("change", () => {
+    if (pre.checked) {
+        preOption = "/code";
+    } else {
+        preOption = "";
+    }
+    getLorem();
+})
+
+// set headings option
+headings.addEventListener("change", () => {
+    if (headings.checked) {
+        headingsOption = "/headers";
+    } else {
+        headingsOption = "";
+    }
+    getLorem();
+})
+
+// set decorate option
+decorate.addEventListener("change", () => {
+    if (decorate.checked) {
+        decorateOption = "/decorate";
+    } else {
+        decorateOption = "";
+    }
+    getLorem();
+})
+
+// set all caps option
+allcaps.addEventListener("change", () => {
+    if (allcaps.checked) {
+        allcapsOption = "/allcaps";
+    } else {
+        allcapsOption = "";
+    }
+    getLorem();
+})
+
+// Copy to clipboard
+btnCopy.onclick = function () {
+    outputRange = document.createRange();
+    outputRange.selectNode(outputCopy);
+    window.getSelection().addRange(outputRange);
+    document.execCommand("Copy");
+}
 
 
 // Get Lorem Ipsum
@@ -94,9 +205,11 @@ async function getLorem() {
         results.innerHTML = "";
     } else {
         showLoading();
-        response = await fetch(`${url}${input.value}${paraLen}`);
+        response = await fetch(url + input.value + paraLen + linkOption + ulOption + olOption + dlOption +
+            bqOption + preOption + headingsOption + decorateOption + allcapsOption);
         data = await response.text();
         results.innerHTML = data;
-        console.log(url + input.value + paraLen)
+        console.log(url + input.value + paraLen + linkOption + ulOption + olOption + dlOption + bqOption +
+            preOption + headingsOption + decorateOption + allcapsOption)
     }
 }
