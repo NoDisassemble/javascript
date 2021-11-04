@@ -9,7 +9,7 @@ const short = document.getElementById("para-len-short");
 const medium = document.getElementById("para-len-medium");
 const long = document.getElementById("para-len-long");
 
-// const for options  | Example: https://loripsum.net/api/5/medium/link/ul/ol/dl/bq/code/headers/decorate/allcaps
+// const for options  
 const links = document.getElementById("links");
 const ul = document.getElementById("ul");
 const ol = document.getElementById("ol");
@@ -20,7 +20,7 @@ const headings = document.getElementById("headings");
 const decorate = document.getElementById("decorate");
 const allcaps = document.getElementById("allcaps");
 
-// set options placeholders
+// set options placeholders | Example: https://loripsum.net/api/5/medium/link/ul/ol/dl/bq/code/headers/decorate/allcaps
 let paraLen = "/medium";
 let linkOption = "";
 let ulOption = "";
@@ -32,6 +32,8 @@ let headingsOption = "";
 let decorateOption = "";
 let allcapsOption = "";
 
+// const for generate button
+const btnGenerate = document.querySelector(".btn-generate");
 
 // consts for copy to clipboard
 const outputCopy = document.getElementById("results");
@@ -190,12 +192,21 @@ allcaps.addEventListener("change", () => {
     getLorem();
 })
 
-// Copy to clipboard
+// generate lorem ipsum
+btnGenerate.onclick = function () {
+    getLorem();
+}
+
+// Copy to clipboard (janky only works on initial load)
 btnCopy.onclick = function () {
     outputRange = document.createRange();
     outputRange.selectNode(outputCopy);
     window.getSelection().addRange(outputRange);
     document.execCommand("Copy");
+    document.getElementById("btnCopy").innerHTML = "Copied!";
+    setTimeout(function () {
+        document.getElementById("btnCopy").innerHTML = "Copy to Clipboard";
+    }, 2000)
 }
 
 
