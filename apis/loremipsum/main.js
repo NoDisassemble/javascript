@@ -197,13 +197,25 @@ btnGenerate.onclick = function () {
     getLorem();
 }
 
-// Copy to clipboard (janky only works on initial load)
+// Copy to clipboard
 btnCopy.onclick = function () {
-    outputRange = document.createRange();
-    outputRange.selectNode(outputCopy);
-    window.getSelection().addRange(outputRange);
-    document.execCommand("Copy");
+    var currentRange;
+    if (document.getSelection().rangeCount > 0) {
+        currentRange = document.getSelection().getRangeAt(0);
+        window.getSelection().removeRange(currentRange);
+    } else {
+        currentRange = false;
+    }
+    var CopyRange = document.createRange();
+    CopyRange.selectNode(outputCopy);
+    window.getSelection().addRange(CopyRange);
+    document.execCommand("copy");
+    window.getSelection().removeRange(CopyRange);
+    if (currentRange) {
+        window.getSelection().addRange(currentRange);
+    }
     document.getElementById("btnCopy").innerHTML = "Copied!";
+    console.log("Text copied to clipboard")
     setTimeout(function () {
         document.getElementById("btnCopy").innerHTML = "Copy to Clipboard";
     }, 2000)
