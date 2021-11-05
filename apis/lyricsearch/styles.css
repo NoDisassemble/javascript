@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+  background: url(./assets/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.671);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  width: 660px;
+  height: 850px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #006699;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.container h2 {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.artist {
+  display: flex;
+  flex-direction: row;
+}
+
+.artist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+  height: 3rem;
+  width: 50px;
+  font-size: 2rem;
+}
+
+.artist-search {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  height: 3rem;
+  width: 200px;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1rem;
+}
+
+.song {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+  height: 3rem;
+  width: 50px;
+  font-size: 2rem;
+}
+
+.song-search {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  height: 3rem;
+  width: 200px;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1rem;
+}
+
+.btn-get-lyrics {
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70px;
+  align-items: center;
+  cursor: pointer;
+  background: #333;
+  border: none;
+}
+
+.play-button {
+  font-size: 2rem;
+  margin: auto;
+  color: #006699;
+}
+
+.play-button:hover {
+  color: green;
+}
+
+.results {
+  display: flex;
+  width: 97%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 10px;
+  white-space: break-spaces;
+}
+
+.loading {
+  position: relative;
+  margin: auto;
+}
+
+.spin {
+  font-size: 3rem;
+  color: rgba(15, 15, 15, 0.555);
+  font-weight: 700;
+  -webkit-animation: spin 1.5s linear infinite; /* Safari */
+  animation: spin 0.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-clipboard {
+  display: inline-block;
+  width: 150px;
+  padding: 5px;
+  font-size: 1rem;
+  margin: 20px 0px;
+  text-align: center;
+  cursor: pointer;
+}
