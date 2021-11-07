@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: url(./assets/haha.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+:is(body, .container) {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: space-between;
+  top: 200px;
+  width: 550px;
+  min-height: 400px;
+  padding: 0px 0px 20px 0px;
+  background-color: #473703;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.486);
+}
+
+.container h2 {
+  position: relative;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(70, 26, 26);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.joke,
+.setup,
+.delivery {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.loading {
+  display: none;
+  margin-top: 45px;
+}
+
+.spin {
+  font-size: 3rem;
+  color: rgba(15, 15, 15, 0.555);
+  font-weight: 700;
+  -webkit-animation: spin 1.5s linear infinite; /* Safari */
+  animation: spin 0.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  position: relative;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  background-color: rgb(70, 26, 26);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(70, 26, 26, 0.555);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background: url(./assets/haha.jpg) no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    top: 80px;
+    width: 400px;
+  }
+}
